@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: expedition-lost-words-api-shrey
+    runtime: node
+    plan: free
+    branch: main
+    buildCommand: npm ci --include=dev
+    startCommand: npm run api
+    healthCheckPath: /api/health
