@@ -1,0 +1,32 @@
+{
+  "name": "expedition-lost-words",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n web,api -c cyan,yellow \"vite\" \"tsx watch server/index.ts\"",
+    "web": "vite",
+    "api": "tsx server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "tsx src/algorithm/findWords.test.ts"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "three": "^0.170.0",
+    "react-dom": "^19.1.0",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.1.0",
+    "@types/three": "^0.170.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.0",
+    "@types/express": "^4.17.21",
+    "concurrently": "^9.0.0"
+  }
+}
